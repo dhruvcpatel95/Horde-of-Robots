@@ -23,7 +23,7 @@ class Robot:
 	def move(self, move_dir):
 		# check if the location after moving is >= (0,0). We have set no upper bounds on location.
 
-		if (self.location[0] + Robot.MOVE_DIR_DICT[move_dir][0] >= 0) and (self.location[0] + Robot.MOVE_DIR_DICT[move_dir][0] >= 0):
+		if (self.location[0] + Robot.MOVE_DIR_DICT[move_dir][0] >= 0) and (self.location[1] + Robot.MOVE_DIR_DICT[move_dir][1] >= 0):
 			self.location = [self.location[0] + Robot.MOVE_DIR_DICT[move_dir][0],
 							 self.location[1] + Robot.MOVE_DIR_DICT[move_dir][1]]
 			self.pointer_dir_key = move_dir
